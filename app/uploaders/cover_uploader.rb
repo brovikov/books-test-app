@@ -19,10 +19,10 @@ class CoverUploader < CarrierWave::Uploader::Base
   def cache_dir
     "#{Rails.root}/tmp/uploads"
   end
-  process resize_to_fill: [450, 450]
+  process resize_to_fit: [450, 450]
   
   version :thumb do
-    process resize_to_fill: [90, 90]
+    process resize_to_fit: [90, 90]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
