@@ -31,7 +31,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'devise'
-gem 'pg'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
