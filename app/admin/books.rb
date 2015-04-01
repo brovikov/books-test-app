@@ -13,6 +13,15 @@ ActiveAdmin.register Book do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :author
+    column "dd" do |book|
+      image_tag(book.cover.thumb)
+    end
+    actions
+  end
 
 end
