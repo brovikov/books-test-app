@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'fog'
+gem 'mini_magick'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -44,6 +48,12 @@ end
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+end
+
+group :development do
+  gem 'better_errors'
+  gem  'binding_of_caller'
+  gem 'meta_request'
 end
 
 # Use ActiveModel has_secure_password

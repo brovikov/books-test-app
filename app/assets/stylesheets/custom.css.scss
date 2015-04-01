@@ -1,0 +1,23 @@
+@import "bootstrap";
+
+footer {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  text-align: center;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+.bigfont {
+  font-size: 18pt;
+  font-weight: bold;
+}
+

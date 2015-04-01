@@ -1,13 +1,11 @@
-<h1>Listing books</h1>
+<h2>Books listing here:</h2>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
       <th>Author</th>
       <th>Cover</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -15,17 +13,19 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.title %></td>
-        <td><%= book.author %></td>
-        <td><%= book.cover %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="col-md-5"><%= book.title %></td>
+        <td class="col-md-3"><%= book.author %></td>
+        <td class="col-md-2"><%= image_tag book.cover.thumb %></td>
+        <td class="col-md-2"><%= link_to 'Show', book, 
+          class: "btn btn-default btn-xs" %>
+        <%= link_to 'Edit', edit_book_path(book), 
+          class: "btn btn-default btn-xs" %>
+        <%= link_to 'Destroy', book, 
+        method: :delete, data: { confirm: 'Are you sure?' },
+          class: "btn btn-default btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Book', new_book_path %>
